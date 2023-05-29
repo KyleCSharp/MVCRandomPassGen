@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Random Password Generator";
+}
+<div class="Background"></div>
+<h2>Random Password Generator</h2>
+<div class="form-container">
+@using (Html.BeginForm("GeneratePassword", "Home", FormMethod.Post))
+{
+    <label>Password Length:</label>
+    <input type="number" name="length" min="1" max="100" value="8" />
+
+    <label>Include Special Characters:</label>
+    <input type="checkbox" name="includeSpecial" value="true" />
+    <input type="hidden" name="includeSpecial" value="false" />
+
+    <input type="submit" value="Generate Password" />
+
+    <p>@ViewBag.Password</p>
+}
+</div>
