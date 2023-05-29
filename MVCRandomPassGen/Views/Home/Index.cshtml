@@ -7,10 +7,10 @@
 @using (Html.BeginForm("GeneratePassword", "Home", FormMethod.Post))
 {
     <label>Password Length:</label>
-    <input type="number" name="length" min="1" max="100" value="8" />
+    <input type="number" name="length" min="1" max="100" value="" />
 
-    <label>Include Special Characters:</label>
-    <input type="checkbox" name="includeSpecial" value="true" />
+        <label>Include Special Characters:<input type="checkbox" name="includeSpecial" value="true" /></label>
+    
     <input type="hidden" name="includeSpecial" value="false" />
 
     <input type="submit" value="Generate Password" />
